@@ -6,11 +6,11 @@ How to check that something works. Read this before saying that it does.
 
 ```
 bin/check          macOS, Linux, Git Bash
-bin\check.cmd      Windows (cmd or PowerShell)
+bin\\check.cmd      Windows (cmd or PowerShell)
 ```
 
 Out of the box, bin/check verifies the agent configuration: AGENTS.md has no
-TODO left and stays short, every document in docs/ has its line in AGENTS.md
+placeholder markers left and stays short, every document in docs/ has its line in AGENTS.md
 and every line points to a file that exists, CLAUDE.md and
 .github/copilot-instructions.md point to AGENTS.md instead of copying it.
 
@@ -24,4 +24,10 @@ place at the end of bin/check, so one command still answers "is it green?".
 
 ## Project tests
 
-TODO: how to run all tests, and how to run a single one.
+Currently, test manually by opening the pages in a browser and verifying:
+- Login page loads and displays correctly
+- Form validation works as expected
+- Navigation between pages works
+- Responsive design works on mobile and desktop
+
+Future: Add automated tests (Playwright, Jest, etc.) when the backend is built.

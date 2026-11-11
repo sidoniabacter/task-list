@@ -5,15 +5,21 @@ parts talk to each other. Describe the shape, not every file.
 
 ## Parts
 
-TODO: one line per part: what it is responsible for.
+- **Frontend** (src/): Vue 3 single-page application with TypeScript, styled with Tailwind CSS. The app is currently static, focused on the login screen and the first UI flow.
+- **Static assets** (public/): icons, images, and other files that do not need a build step.
+- **No backend yet**: the project is intentionally frontend-only for the first phase; authentication and task storage are not implemented yet.
 
 ## How they connect
 
-TODO: who calls whom, and through what (HTTP, a function call, a queue, a file).
+- The app runs as a client-side Vue interface in the browser.
+- The user interacts with forms, validation states, and screen transitions directly in the frontend.
+- A future backend, if added later, will sit behind the frontend and connect through a dedicated API boundary.
 
 ## Data
 
-TODO: where data lives and who is allowed to change it.
+- For now, user and task information live only in the browser state or are mocked during UI development.
+- No database or server-side persistence is required for the login page milestone.
+- The frontend keeps the logic local and isolated so the UI can be tested visually before backend work begins.
 
 ## What does not belong here
 

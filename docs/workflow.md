@@ -11,6 +11,19 @@ pull request or making a release.
 4. Write what happened in docs/ai-log.md.
 5. Commit, push, open a pull request.
 
+## Pull requests
+
+- Title: short and descriptive (e.g., "Add login page with Tailwind")
+- Description: link to the spec, screenshots if UI changes
+- At least one approval required before merging
+- All checks must pass (bin/check, future CI)
+
+## Commits
+
+- Follow conventions from docs/conventions.md
+- Squash related commits before creating a PR
+- Rebase onto main before merging
+
 ## Releases
 
-TODO: how a version is released or deployed, if the project has that step.
+Not applicable yet. Project is in early development.

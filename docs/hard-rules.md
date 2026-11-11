@@ -22,12 +22,6 @@ Each rule has a reason; a rule without a reason gets ignored or misapplied.
 4. Never put secrets (passwords, API keys, tokens) in the repository or in a prompt.
    Why: what is committed or sent cannot be taken back.
 
-TODO: add your own rules below, each with the incident that caused it.
-
-## Rule format
-
-```
-N. Never <do what>.
-   Why: <the reason>.
-   Incident: YYYY-MM-DD, <what went wrong>.
-```
+5. Never commit code that has not been tested manually.
+   Why: automated tests do not catch everything; manual verification ensures
+   the feature works as intended in the browser.

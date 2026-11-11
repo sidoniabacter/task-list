@@ -3,27 +3,35 @@
 How to start the project. This is the page the agent must find when asked
 "how do I start the project?".
 
-Write commands exactly as they are typed. If a command differs on Windows,
-give both versions.
-
 ## Requirements
 
-TODO: what must be installed, with versions (for example Docker Desktop, Git).
+- Node.js v20 or later
+- npm (comes with Node.js)
+- Git
+- A modern browser (Chrome, Firefox, Edge)
 
 ## Start
 
+When the project is scaffolded and dependencies are installed, start the app with:
+
 ```
-TODO: the commands that start the project
+npm install
+npm run dev
 ```
 
-TODO: the address where it opens (for example http://localhost:5173).
+The app is designed as a Vue 3 + Vite + Tailwind frontend. For this phase there is no backend or API yet, so the login page is tested as a browser-only interface.
 
 ## Stop
 
+Press Ctrl+C in the terminal where the server is running.
+
+## Build for production
+
 ```
-TODO: the commands that stop it
+npm run build
+npm run preview
 ```
 
 ## Common problems
 
-TODO: problems that actually happened, each with its fix.
+None recorded yet.
