@@ -16,3 +16,6 @@ src/ front end · public/ static files · docs/ project memory
 - docs/decisions.md: before you reopen a decision
 - docs/specs/: the feature spec, before you build anything
 - docs/ai-log.md: the human's own AI log; read it, never edit it
+
+## Non-standard
+- Node and Yarn run only in the `app` Docker container; run Yarn with `docker compose exec app yarn ...`.

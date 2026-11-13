@@ -1,37 +1,44 @@
-# Development environment
+# Mediul de dezvoltare
 
-How to start the project. This is the page the agent must find when asked
-"how do I start the project?".
+## Cerințe
 
-## Requirements
-
-- Node.js v20 or later
-- npm (comes with Node.js)
+- Docker Desktop (cu Docker Compose) sau Docker Engine și pluginul Compose
 - Git
-- A modern browser (Chrome, Firefox, Edge)
+- Un browser modern (Chrome, Firefox sau Edge)
 
-## Start
+Node.js v24.22.1 și Yarn v4.18.1 sunt furnizate de containerul `app`; nu le
+instala și nu rula comenzi `node` sau `yarn` pe gazdă.
 
-When the project is scaffolded and dependencies are installed, start the app with:
+## Pornire
 
-```
-npm install
-npm run dev
-```
+Din rădăcina proiectului, construiește imaginea și pornește containerul:
 
-The app is designed as a Vue 3 + Vite + Tailwind frontend. For this phase there is no backend or API yet, so the login page is tested as a browser-only interface.
-
-## Stop
-
-Press Ctrl+C in the terminal where the server is running.
-
-## Build for production
-
-```
-npm run build
-npm run preview
+```sh
+docker compose up --build -d
 ```
 
-## Common problems
+Portul 5173 este publicat la adresa http://localhost:5173. Aplicația este încă
+în lucru și `package.json` nu definește încă un script de server; pagina va fi
+disponibilă când serverul aplicației va porni în container pe portul 5173.
 
-None recorded yet.
+## Comenzi Yarn
+
+Rulează comenzile Yarn numai în containerul pornit:
+
+```sh
+docker compose exec app yarn install
+docker compose exec app yarn --version
+docker compose exec app yarn <comandă>
+```
+
+Prima comandă instalează dependențele declarate în manifestul Yarn.
+De exemplu, verificarea proiectului din `bin/check` rulează
+`docker compose exec -T app yarn build`.
+
+## Oprire
+
+Oprește și elimină containerul proiectului:
+
+```sh
+docker compose down
+```
